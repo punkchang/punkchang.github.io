@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://punkchang.github.io/"/>
-  <updated>2019-10-24T03:58:10.314Z</updated>
+  <updated>2019-10-24T07:43:02.202Z</updated>
   <id>https://punkchang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://punkchang.github.io/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/"/>
     <id>https://punkchang.github.io/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/</id>
     <published>2019-10-24T03:44:38.000Z</published>
-    <updated>2019-10-24T03:58:10.314Z</updated>
+    <updated>2019-10-24T07:43:02.202Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,9 @@
       
         
         
-          &lt;pre class=&quot;line-numbers language-flow&quot;&gt;&lt;code class=&quot;language-flow&quot;&gt;st=&gt;start:开始
-op=&gt;operation: Cut
-cond=&gt;condition: Yes or No?
-e=&gt;end
+          &lt;p&gt;#背景&lt;br&gt;之前再做TB的时候遇到一个问题，问题是这样的：&lt;/p&gt;
+&lt;p&gt;子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this.randomize()   
         
       
     
