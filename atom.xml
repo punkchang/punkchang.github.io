@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://punkchang.github.io/"/>
-  <updated>2019-10-24T07:45:36.860Z</updated>
+  <updated>2019-10-24T08:28:34.780Z</updated>
   <id>https://punkchang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://punkchang.github.io/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/"/>
     <id>https://punkchang.github.io/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/</id>
     <published>2019-10-24T03:44:38.000Z</published>
-    <updated>2019-10-24T07:45:36.860Z</updated>
+    <updated>2019-10-24T08:28:34.780Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="OOP" scheme="https://punkchang.github.io/tags/OOP/"/>
     
   </entry>
   

@@ -8,9 +8,15 @@
       <link href="/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/"/>
       <url>/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/</url>
       
-        <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>之前再做TB的时候遇到一个问题，问题是这样的：</p><p>子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：</p><pre><code>this.randomize()    </code></pre><p>这样的函数，问题是这段code到底执行的是子类的randomize函数还是父类的randomize函数。</p><p>为了更清楚的表达，附上伪代码：</p><pre><code>class fu    function new()        super.new()    endfunction    virtual function void generate();        this.randomize();    endfunctionenclass   class zi extend fu    function new()        super.new()    endfunction    virtual function void generate();        super.generate();    endfunctionenclassf = new zi;f.generate();</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>之前再做TB的时候遇到一个问题，问题是这样的：</p><p>子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：</p><pre><code>this.randomize()    </code></pre><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>这段code到底执行的是子类的randomize函数还是父类的randomize函数。</p><p>为了更清楚的表达，附上伪代码：</p><pre><code>class fu    function new()        super.new()    endfunction    virtual function void generate();        this.randomize();    endfunctionenclass   class zi extend fu    function new()        super.new()    endfunction    virtual function void generate();        super.generate();    endfunctionenclassf = new zi;f.generate();</code></pre><h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>从运行的结果上看，this指的是子类zi，而不是父类fu。需要注意的问题有以下几个来理解:</p><ol><li>子类调用new函数的时候，虽然调用了super.new即父类的new函数，但是<strong>父类是没有被创建的</strong>,而只有子类的实例被创建。</li><li>子类在创建实例的时候，除了创建出了子类独有的部分，也会把<strong>父类继承的部分也创建出来</strong>保存在内存中。<br><img src="1.jpg" alt="子类内存图"></li><li>所以在上述代码中其实只有子类的实例f，那么this其实就是一个父类类型的指针指向了子类对象，自然调用的也是子类的randomize。<ul><li>需要注意的是randomize这个内建函数本身就是virtual类型的，已经被子类的randomize进行了重写。</li></ul></li></ol><h1 id="引申"><a href="#引申" class="headerlink" title="引申"></a>引申</h1><p>对于this的指针还是有其他类似看起来很tricky的地方：</p><ul><li>this的调用的是父类中的函数，且函数是virtual的函数，才会有上述结论。<ul><li>this调用的是成员变量：无论子类中是否覆盖，指的都是父类的变量值，而非子类。</li><li>this调用的函数没有被子类重写：指的还是父类的函数，而非子类。</li></ul></li></ul>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> OOP </tag>
+            
+        </tags>
       
     </entry>
     
