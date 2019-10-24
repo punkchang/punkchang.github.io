@@ -8,9 +8,9 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="#背景之前再做TB的时候遇到一个问题，问题是这样的：
+    <meta name="description" content="背景之前再做TB的时候遇到一个问题，问题是这样的：
 子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：
-this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是">
+this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是父">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -457,33 +457,28 @@ this.randomize()    这样的函数，问题是这段code到底执行的是子�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#背景<br>之前再做TB的时候遇到一个问题，问题是这样的：</p>
+                <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>之前再做TB的时候遇到一个问题，问题是这样的：</p>
 <p>子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：</p>
 <pre><code>this.randomize()    </code></pre><p>这样的函数，问题是这段code到底执行的是子类的randomize函数还是父类的randomize函数。</p>
 <p>为了更清楚的表达，附上伪代码：</p>
-<pre><code>    class fu
-        function new()
-            super.new()
-        endfunction
-
-        virtual function void generate();
-            this.randomize();
-        endfunction
-    enclass   
-
-    class zi extend fu
-
-        function new()
-            super.new()
-        endfunction
-
-        virtual function void generate();
-            super.generate();
-        endfunction
-    enclass
-
-    f = new zi;
-    f.generate();
+<pre><code>class fu
+    function new()
+        super.new()
+    endfunction
+    virtual function void generate();
+        this.randomize();
+    endfunction
+enclass   
+class zi extend fu
+    function new()
+        super.new()
+    endfunction
+    virtual function void generate();
+        super.generate();
+    endfunction
+enclass
+f = new zi;
+f.generate();
 </code></pre>
             </div>
             <hr />
@@ -861,9 +856,9 @@ this.randomize()    这样的函数，问题是这段code到底执行的是子�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            #背景之前再做TB的时候遇到一个问题，问题是这样的：
+                            背景之前再做TB的时候遇到一个问题，问题是这样的：
 子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：
-this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是
+this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是父
                         
                     </div>
                     <div class="publish-info">
@@ -898,9 +893,9 @@ this.randomize()    这样的函数，问题是这段code到底执行的是子�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            #背景之前再做TB的时候遇到一个问题，问题是这样的：
+                            背景之前再做TB的时候遇到一个问题，问题是这样的：
 子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：
-this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是
+this.randomize()    这样的函数，问题是这段code到底执行的是子类的randomize函数还是父
                         
                     </div>
                     <div class="publish-info">

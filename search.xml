@@ -8,7 +8,7 @@
       <link href="/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/"/>
       <url>/2019/10/24/fu-lei-zhong-de-this-bei-zi-lei-diao-yong/</url>
       
-        <content type="html"><![CDATA[<p>#背景<br>之前再做TB的时候遇到一个问题，问题是这样的：</p><p>子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：</p><pre><code>this.randomize()    </code></pre><p>这样的函数，问题是这段code到底执行的是子类的randomize函数还是父类的randomize函数。</p><p>为了更清楚的表达，附上伪代码：</p><pre><code>    class fu        function new()            super.new()        endfunction        virtual function void generate();            this.randomize();        endfunction    enclass       class zi extend fu        function new()            super.new()        endfunction        virtual function void generate();            super.generate();        endfunction    enclass    f = new zi;    f.generate();</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>之前再做TB的时候遇到一个问题，问题是这样的：</p><p>子类调用了父类中的函数，只对子类进行了new，而父类函数中调用了类似：</p><pre><code>this.randomize()    </code></pre><p>这样的函数，问题是这段code到底执行的是子类的randomize函数还是父类的randomize函数。</p><p>为了更清楚的表达，附上伪代码：</p><pre><code>class fu    function new()        super.new()    endfunction    virtual function void generate();        this.randomize();    endfunctionenclass   class zi extend fu    function new()        super.new()    endfunction    virtual function void generate();        super.generate();    endfunctionenclassf = new zi;f.generate();</code></pre>]]></content>
       
       
       
