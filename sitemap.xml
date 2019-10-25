@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://punkchang.github.io/contact/index.html</loc>
-    
-    <lastmod>2019-10-24T02:16:04.781Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://punkchang.github.io/categories/index.html</loc>
     
     <lastmod>2019-10-24T02:16:04.781Z</lastmod>
@@ -37,14 +30,21 @@
   </url>
   
   <url>
-    <loc>https://punkchang.github.io/about/index.html</loc>
+    <loc>https://punkchang.github.io/contact/index.html</loc>
+    
+    <lastmod>2019-10-24T02:16:04.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://punkchang.github.io/archives/index.html</loc>
     
     <lastmod>2019-10-24T02:16:04.780Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://punkchang.github.io/archives/index.html</loc>
+    <loc>https://punkchang.github.io/about/index.html</loc>
     
     <lastmod>2019-10-24T02:16:04.780Z</lastmod>
     
